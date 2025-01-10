@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/FE/assets/bank.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adarsh Bank of India - Secure Banking Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="/FE/style/indexcss.css">
+
+    <style>
+        /* Additional styles for the new button layout */
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .btn-tertiary {
+            background: transparent;
+            color: var(--primary-blue);
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            border: 1px solid var(--primary-blue);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-tertiary:hover {
+            background: rgba(30, 64, 175, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 640px) {
+            .button-group {
+                flex-direction: column;
+                width: 100%;
+            }
+            .button-group button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="logo-container">
+                    <img src="/FE/assets/BankLogo.png" alt="Bank Logo" class="logo-image">
+                    <span class="logo-text">Adarsh Kathriya Bank</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Services</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text-section">
+                    <h1 class="hero-title">
+                        Welcome to Secure Banking Solutions
+                    </h1>
+                    <p class="hero-description">
+                        Experience seamless banking with state-of-the-art security and personalized services tailored to your needs.
+                    </p>
+                    <div class="button-group">
+                        <button class="btn-primary" onclick="login()">
+                            Login as User
+                        </button>
+                        <button class="btn-secondary" onclick="createAccount()">
+                            Create Account
+                        </button>
+                        <button class="btn-secondary" onclick="adminLogin()">
+                            Login as Admin
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image-section">
+                    <img src="/FE/assets/bank.png" alt="Banking Illustration" class="theme-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section">
+        <div class="features-container">
+            <div class="features-grid">
+                <!-- Secure Banking Feature -->
+                <div class="feature-card">
+                    <div class="feature-icon-container">
+                        <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Secure Banking</h3>
+                    <p class="feature-description">Advanced encryption and security measures to protect your financial data.</p>
+                </div>
+
+                <!-- Fast Transfers Feature -->
+                <div class="feature-card">
+                    <div class="feature-icon-container">
+                        <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Fast Transfers</h3>
+                    <p class="feature-description">Quick and easy money transfers to any account worldwide.</p>
+                </div>
+
+                <!-- 24/7 Support Feature -->
+                <div class="feature-card">
+                    <div class="feature-icon-container">
+                        <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">24/7 Support</h3>
+                    <p class="feature-description">Round-the-clock customer support for all your banking needs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/FE/js/script.js"></script>
+</body>
+</html>
