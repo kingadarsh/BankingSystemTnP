@@ -7,51 +7,15 @@
     <title>Adarsh Bank of India - Secure Banking Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="stylesheet" href="/FE/style/indexcss.css">
-
-    <style>
-        /* Additional styles for the new button layout */
-        .button-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        
-        .btn-tertiary {
-            background: transparent;
-            color: var(--primary-blue);
-            padding: 0.75rem 2rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            border: 1px solid var(--primary-blue);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-tertiary:hover {
-            background: rgba(30, 64, 175, 0.05);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        @media (max-width: 640px) {
-            .button-group {
-                flex-direction: column;
-                width: 100%;
-            }
-            .button-group button {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 <body class="bg-gray-50">
     <button class="theme-toggle" onclick="toggleTheme()">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="5"/>
             <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
         </svg>
     </button>
 
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-content">
@@ -63,32 +27,28 @@
                     <a href="#" class="nav-link">About</a>
                     <a href="#" class="nav-link">Services</a>
                     <a href="#" class="nav-link">Contact</a>
+                    <button class="mobile-menu-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 12h18M3 6h18M3 18h18"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="hero-section">
+    <main class="hero-section">
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text-section">
-                    <h1 class="hero-title">
-                        Welcome to Secure Banking Solutions
-                    </h1>
-                    <p class="hero-description">
-                        Experience seamless banking with state-of-the-art security and personalized services tailored to your needs.
-                    </p>
-                    <div class="button-group">
-                        <button class="btn-primary" onclick="login()">
-                            Login as User
-                        </button>
-                        <button class="btn-secondary" onclick="createAccount()">
-                            Create Account
-                        </button>
-                        <button class="btn-secondary" onclick="adminLogin()">
-                            Login as Admin
-                        </button>
+                    <h1 class="hero-title">Welcome to Secure Banking Solutions</h1>
+                    <p class="hero-description">Experience seamless banking with state-of-the-art security and personalized services tailored to your needs.</p>
+                    <div class="button-container">
+                        <a href="/FE/html/loginPage.html" class="btn-primary">Login as User</a>
+
+                        <a href="/FE/html/create-account.html" class="btn-secondary">Create Account</a>
+
+                        <a href="/FE/html/login-as-admin.html" class="btn-secondary">Login as Admin</a>
                     </div>
                 </div>
                 <div class="hero-image-section">
@@ -96,13 +56,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <!-- Features Section -->
-    <div class="features-section">
+    <section class="features-section">
         <div class="features-container">
             <div class="features-grid">
-                <!-- Secure Banking Feature -->
                 <div class="feature-card">
                     <div class="feature-icon-container">
                         <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,7 +71,6 @@
                     <p class="feature-description">Advanced encryption and security measures to protect your financial data.</p>
                 </div>
 
-                <!-- Fast Transfers Feature -->
                 <div class="feature-card">
                     <div class="feature-icon-container">
                         <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -124,7 +81,6 @@
                     <p class="feature-description">Quick and easy money transfers to any account worldwide.</p>
                 </div>
 
-                <!-- 24/7 Support Feature -->
                 <div class="feature-card">
                     <div class="feature-icon-container">
                         <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,7 +92,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <script src="/FE/js/script.js"></script>
 </body>
